@@ -1,0 +1,17 @@
+/* 号番号の括弧付き数字での箇条書き */
+ol li ol li {
+    list-style-type: none;
+    counter-increment: cnt;
+    position: relative;
+}
+
+ol li ol li::before {
+    content: '(' counter(cnt) ') ';
+    display: inline-block;
+    margin-left: -2.5em;
+    width: 2em;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
