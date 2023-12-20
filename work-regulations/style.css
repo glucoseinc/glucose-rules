@@ -1,10 +1,12 @@
 /* 号番号の括弧付き数字での箇条書き */
+body>ol>li>ol>li,
 .markdown-body>ol>li>ol>li {
     list-style-type: none;
     counter-increment: cnt;
     position: relative;
 }
 
+body>ol>li>ol>li::before,
 .markdown-body>ol>li>ol>li::before {
     content: '(' counter(cnt) ') ';
     display: inline-block;
@@ -16,6 +18,12 @@
     left: 0;
 }
 
+body>ol>li>ol>li>ol>li,
 .markdown-body>ol>li>ol>li>ol>li {
     list-style-type: lower-roman;
+}
+
+body ul li,
+.markdown-body ul li {
+    list-style-type: none;
 }
