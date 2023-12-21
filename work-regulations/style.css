@@ -27,3 +27,13 @@ body ul li,
 .markdown-body ul li {
     list-style-type: none;
 }
+
+body>ol>li>ol>li>div.MathJax_Display,
+.markdown-body>ol>li>ol>li>div.MathJax_Display {
+    padding-left: 0em;
+}
+
+body>ol>li>div.MathJax_Display,
+.markdown-body>ol>li>div.MathJax_Display {
+    padding-left: 3em;
+}
